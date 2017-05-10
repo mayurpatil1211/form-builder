@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Example formBuilder</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://formbuilder.online/assets/css/form-builder.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="build-wrap">
+        <div class="row no_margin">
+            <div class="sidebar col-md-4"></div>
+            <div class="main_page col-md-8"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://formbuilder.online/assets/js/form-builder.min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            var fbTemplate = document.getElementById('build-wrap');
+            var x = $(fbTemplate).formBuilder();
+
+            function saveclick() {
+                $('.save-template').on('click', function() {
+                    console.log(x.formData)
+                });
+            }
+
+            setTimeout(saveclick, 2000);
+        });
+    </script>
+    </script>
+</body>
+
+</html>

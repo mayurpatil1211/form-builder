@@ -1,0 +1,180 @@
+.no_margin {
+    margin: 0 !important;
+}
+
+
+/*Sidebar*/
+
+.sidebar {
+    display: flex;
+        width: 33%;
+    position: fixed !important;
+    overflow: auto !important;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #fafafa;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.select_element {
+    position: relative;
+    width: 100%;
+}
+
+.select_element_ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.select_element_li {
+    list-style: none;
+    display: flex;
+    width: 32%;
+    justify-content: center;
+    background: rgba(35, 71, 76, 0.4);
+    margin: 5px 0px;
+    padding: 5px 0px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    transition: 200ms all ease-in-out;
+    cursor: pointer;
+}
+
+.select_element_li:hover, .select_element_li.active {
+    background: #20d7ef;
+}
+
+.newTextBoxes{
+    margin-bottom: 15px;
+}
+
+form{
+        margin-bottom: 20px;
+}
+
+/*Sidebar End*/
+
+
+/*Main Form*/
+
+.main_page {
+    float: right !important;
+}
+
+.select_element.col-lg-12 {
+    height: 100px;
+}
+
+.custom_radio {
+    margin: 15px !important;
+}
+
+label.form-label {
+    width: 100% !important;
+}
+/*Main Form End*/
+ .main_page {
+    float: right !important;
+}
+
+.select_element.col-lg-12 {
+    height: 170px;
+}
+
+.custom_radio {
+    margin: 15px !important;
+}
+
+label.form-label {
+    width: 100% !important;
+}
+
+input[type="checkbox"] {
+    margin: 10px 10px 10px 16px;
+    vertical-align: middle;
+}
+
+select.selectpicker{
+    height: 23px;
+    width: 100px;
+    border-color: #fafafa;
+    border-radius: 2px;
+}
+
+.conditional_rdo{
+    width: 70%;
+    margin-right: 0px;
+    padding: 0px;
+    float: left;
+  
+}
+
+.time{
+  width: 105px;
+}
+
+li.li {
+    list-style-type: none;
+    float: left;
+
+    margin: 10px;
+}
+
+.radionDiv{
+  width: 100%;
+    height: auto;
+    overflow: auto;
+        margin: 33px;
+        padding: 25px;
+}
+
+input[type="checkbox"] {
+    margin: 4px 8px 8px 13px;
+    vertical-align: middle;
+    width: 20px;
+}
+
+input.form-control.addNewOption.newTextBoxes {
+    width: 70%;
+    margin-right: 0;
+}
+
+
+
+button.btn.btn-danger.removeItem {
+    width: 61px;
+    font-size: 10px;
+    padding: 7px;
+}
+.ui-resizable.ui-draggable.ui-draggable-handle: hover{
+    border: 1px solid #337ab7;
+    border-radius: 10px;
+}
+
+ul.country-list {
+    width: 350px;
+        font-size: 10px;
+}
+.flag-box {
+    margin-right: 34px !important;
+}
+
+span.dial-code {
+    margin-left: 192px !important;
+}
+input#radio {
+    width: 20px;
+}
+
+input[type=radio]{
+ width: 20px;
+}
+
+
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+#sortable li span { position: absolute; margin-left: -1.3em; }

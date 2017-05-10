@@ -1,0 +1,667 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <title>Example formBuilder</title>
+     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="cdn/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="cdn/bootstrap.min.js">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="build/css/intlTelInput.css">
+    <link rel="stylesheet" href="build/css/demo.css">
+    <link href="css/dcalendar.picker.css" rel="stylesheet" type="text/css">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+   
+   
+   
+
+
+
+  </head>
+
+  <body>
+    <div id="build-wrap">
+      <div class="row no_margin">
+        <div class="sidebar col-md-4">
+          <div class="row" style="width: 100%;">
+            <div class="select_element  col-lg-12">
+              <ul class="select_element_ul">
+                <li class="select_element_li">
+                  <span id="input_text">Text</span>
+                </li>
+                <li class="select_element_li">
+                  <span id="input_radio">Radio</span>
+                </li>
+                <li class="select_element_li">
+                  <span id="input_checkbox">Checkbox</span>
+                </li>
+                <li class="select_element_li">
+                  <span id="input_textarea">TextArea</span>
+                </li>
+                <li class="select_element_li">
+                  <span id="input_select">Select</span>
+                </li>
+                <li class="select_element_li">
+                  <span id="input_conditional_radio">Conditional Radio</span>
+                </li>
+
+                <li class="select_element_li">
+                  <span id="input_time">Time</span>
+                </li>
+
+                <li class="select_element_li">
+                  <span id="input_calendar">Calendar</span>
+                </li>
+
+                <li class="select_element_li">
+                  <span id="input_range">Range</span>
+                </li>
+
+                <li class="select_element_li">
+                  <span id="input_file">File Upload</span>
+                </li>
+
+                <li class="select_element_li">
+                  <span id="input_matrix">Matrix</span>
+                </li>
+              </ul>
+                
+             <!--    <div class="text-center">
+               <button class="btn btn-sm btn-primary" id="save_all">Save</button>
+               <button class="btn btn-sm btn-danger" id="clear_all">Clear</button>
+               </div> -->
+
+            </div>
+
+            <div class="select_settings col-lg-12" id="input_text_settings">
+              <h3>Settings</h3>
+              <form class="form textform">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="text_required" class="checkbox">
+              </div>
+
+              <div class="form">
+              <label>Question</label> : <input type="text" id="text_question" class="form-control" required><br>
+              </div>
+
+              <!--  <div class="form-group">
+              <label>ID</label> : <input type="text" id="text_name" class="form-control" required><br>
+              </div> -->
+
+              <div class="form-group">
+              <label>Placeholder</label> : <input type="text" id="text_placeholder" class="form-control"><br>
+              </div>
+    
+              <div class="form-group">
+              <label>Type</label> : 
+              <select class="form-control selcls" data-style="btn-default" id="text_select" required>
+               <option value="-1">Select</option>
+              <option value="text">Text</option>
+              <option value="tel">Telephone</option>
+              <option value="email">Email</option>
+              <option value="number">Number</option>
+              <option value="date">Date</option>
+              <option value="password">Password</option>
+              <option value="url">URL</option>
+              </select>
+              </div>
+
+              <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_text" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+          
+               <!--  <div class="form-group">
+              <label>Category</label> : <input type="text" id="text_category" class="form-control"><br>
+              </div> -->
+    
+                 <div class="text-center">
+               <button type="submit" class="btn btn-sm btn-primary" id="txt_save_all">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="txt_clear_all" onclick="reset()">Clear</button>
+               </div>
+
+              </form>
+            </div>
+
+
+          <div class="select_settings col-lg-12" id="input_radio_settings">
+              <h3>Settings</h3>
+              <form class="form">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="radio_required" class="checkbox">
+              </div>
+
+              <div class="form-group">
+              <label>Label</label> : <input type="text" id="radio_label" class="form-control"><br>
+              </div>
+  <!-- 
+              <div class="form-group">
+              <label>Radio Group Name</label> : <input type="text" id="radio_name" class="form-control"><br>
+              </div> -->
+
+                <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_radio" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+              
+              <div class="form-group" id="radio_group">
+              <label>Add Buttons</label> : <input type="text" class="form-control addNewRadio newTextBoxes" placeholder="value">
+              </div>
+              <button class="btn btn-sm btn-success " id="input_radio_settings_btn">Add</button>
+              <button class="btn btn-sm btn-danger" id="remove_radio_settings_btn">remove</button>
+
+               <div class="text-center">
+               <button type="sumit" class="btn btn-sm btn-primary" id="radio_save_all">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="radio_clear_all">Clear</button>
+               </div>
+              </form>
+            </div>
+              
+
+
+              <div class="select_settings col-lg-12" id="input_checkbox_settings">
+                  <h3>Settings</h3>
+              <form class="form">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="checkbox_required" class="checkbox">
+              </div>
+
+              <div class="form">
+              <label>Label</label> : <input type="text" id="checkbox_label" class="form-control"><br>
+              </div>
+
+                <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_check" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+
+               <div class="form-group" id="checkGroup">
+              <label>Add Checkbox</label> : <input type="text" name="" class="form-control addNewCheckBox newTextBoxes" placeholder="value" required="required">
+              </div>
+              <button class="btn btn-sm btn-success" id="input_checkbox_settings_btn">Add</button>
+              <button class="btn btn-sm btn-danger" id="remove_checkbox_settings_btn">Remove</button>
+
+
+             <div class="text-center">
+               <button type="submit" class="btn btn-sm btn-primary" id="check_save_all">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="check_clear_all" onclick="reset()">Clear</button>
+               </div>
+              </form>
+              
+            </div>
+
+
+
+             <div class="select_settings col-lg-12" id="input_textarea_settings">
+                  <h3>Settings</h3>
+              <form class="form">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="txt_area_req" class="checkbox">
+              </div>
+
+              <div class="form">
+              <label>Question</label> : <input type="text" id="txt_area_question" class="form-control" required="required"><br>
+              </div>
+
+              <div class="form-group">
+              <label>Placeholder</label> : <input type="text" id="txt_area_placeholder" class="form-control" required="required"><br>
+              </div> 
+
+                <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_textarea" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+
+             <!--   <div class="form-group">
+              <label>Rows</label> : <input type="number" id="txt_area_rows" class="form-control"><br>
+              </div> 
+
+               <div class="form-group">
+              <label>Column</label> : <input type="number" id="txt_area_cols" class="form-control"><br>
+              </div>  -->
+
+               <div class="text-center">
+               <button type="submit" class="btn btn-sm btn-primary" id="txtarea_save_all">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="txtarea_clear_all" onclick="reset()">Clear</button>
+               </div>          
+              </form>
+              
+            </div>
+
+
+
+             <div class="select_settings col-lg-12" id="input_select_settings">
+                  <h3>Settings</h3>
+              <form class="form">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="select_required" class="checkbox">
+              </div>
+
+              <div class="form">
+              <label>Question</label> : <input type="text" id="select_question" class="form-control" required="required"><br>
+              </div>
+                
+                  <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_option" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+
+
+                 <div class="form-group">
+              <label >Dropdown</label> : 
+              <select class="form-control selcls" id="select_dropdown">
+               <!-- <option value="-1">Select</option> -->
+              <option value="single">Single</option>
+              <option value="multiple">Multiple</option>
+              </select>
+              </div>
+
+
+               <div class="form-group" id="option_group">
+              <label>Add Option</label> : <input type="text" class="form-control addNewOption newTextBoxes" placeholder="value" required="required">
+              </div>
+              <button class="btn btn-sm btn-success" id="input_select_settings_btn">Add</button>
+              <button class="btn btn-sm btn-danger" id="remove_select_settings_btn">Remove</button>
+
+                 <div class="text-center">
+               <button type="submit" class="btn btn-sm btn-primary" id="select_save_all">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="select_clear_all" onclick="reset()">Clear</button>
+               </div>
+              </form>
+              
+            </div>
+
+
+
+             <div class="select_settings col-lg-12" id="input_conditional_radio_settings" class="conditional_radio_settings">
+                  <h3>Settings</h3>
+              <form class="form">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="conditional_required" class="checkbox">
+              </div>
+
+          
+                
+                  <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_condional" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+
+                 <!--  <div class="radionDiv">
+                    <label>Radio Button Value 1</label><br>
+                    <input type="text" class="form-control conditional_rdo">&nbsp&nbsp
+                    &nbsp<input type="checkbox" class="make_conditional"><p style="float: left;">Check to Make Conditional</p>
+                  </div>
+                  <div class="radionDiv">
+                   <label>Radio Button Value 2</label><br>
+                    <input type="text" class="form-control conditional_rdo">&nbsp&nbsp
+                    &nbsp<input type="checkbox" class="make_conditional"><p style="float: left;">Check to Make Conditional</p>
+                  </div>    -->   
+               
+
+               <div class="text-center" style="margin: 15px; ">
+               <button type="submit" class="btn btn-sm btn-primary" id="save_all">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="clear_all" onclick="reset()">Clear</button>
+               </div>
+
+              </form>
+              
+            </div>
+
+                       
+
+
+
+
+                <div class="select_settings col-lg-12" id="input_time_settings">
+                  <h3>Settings</h3>
+              <form class="form">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="time_required" class="checkbox">
+              </div>
+
+              <div class="form">
+              <label>Question</label> : <input type="text" id="time_question" class="form-control" required="required"><br>
+              </div>
+
+   
+
+                <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_time" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+
+               <div class="text-center">
+               <button type="submit" class="btn btn-sm btn-primary" id="save_time">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="clear_time" onclick="reset()">Clear</button>
+               </div>          
+              </form>
+              
+            </div>
+    
+
+
+
+               <div class="select_settings col-lg-12" id="input_range_settings">
+                  <h3>Settings</h3>
+              <form class="form">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="range_required" class="checkbox">
+              </div>
+
+              <div class="form">
+              <label>Question</label> : <input type="text" id="range_question" class="form-control" required="required"><br>
+              </div>
+                
+                  <div class="form">
+              <label>Start Value</label> : <input type="number" id="range_start" class="form-control" required="required"><br>
+              </div>
+
+                <div class="form">
+              <label>End Value</label> : <input type="number" id="range_end" class="form-control" required="required"><br>
+              </div>
+                  
+                   <div class="form">
+              <label>Steps</label> : <input type="number" id="range_steps" class="form-control" required="required"><br>
+              </div>
+
+                <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_range" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+
+               <div class="text-center">
+               <button type="submit" class="btn btn-sm btn-primary" id="save_range">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="clear_range" onclick="reset()">Clear</button>
+               </div>          
+              </form>
+              
+            </div>
+
+
+
+
+
+             <div class="select_settings col-lg-12" id="input_file_settings">
+                  <h3>Settings</h3>
+              <form class="form">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="file_required" class="checkbox">
+              </div>
+
+              <div class="form">
+              <label>Heading</label> : <input type="text" id="file_question" class="form-control" required="required"><br>
+              </div>
+                
+               
+
+                <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_file" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+
+               <div class="text-center">
+               <button type="submit" class="btn btn-sm btn-primary" id="save_file">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="clear_file" onclick="reset()">Clear</button>
+               </div>          
+              </form>
+              
+            </div>
+
+
+
+
+  <!-- calendar starts -->
+            <div class="select_settings col-lg-12" id="input_calendar_settings">
+                  <h3>Settings</h3>
+              <form class="form">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="calendar_required" class="checkbox">
+              </div>
+
+              <div class="form">
+              <label>Heading</label> : <input type="text" id="calendar_question" class="form-control" required="required"><br>
+              </div>
+                
+               
+
+                <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_calendar" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+
+               <div class="text-center">
+               <button type="submit" class="btn btn-sm btn-primary" id="save_calendar">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="clear_calendar" onclick="reset()">Clear</button>
+               </div>          
+              </form>
+              
+            </div>
+
+  <!-- calendar end -->
+
+
+  <!-- Matrix start -->
+                  <div class="select_settings col-lg-12" id="input_matrix_settings">
+                  <h3>Settings</h3>
+              <form class="form">
+              <div class="form-group">
+              <label>Required</label><input type="Checkbox" id="matrix_required" class="checkbox">
+              </div>
+
+              <div class="form">
+              <label>Label</label> : <input type="text" id="matrix_label" class="form-control"><br>
+              </div>
+
+                <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" data-style="btn-default" id="category_select_matrix" required="required">
+                <option value="-1">Select Category</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="basic_infrastructure">Basic Infrastructure</option>
+                <option value="sanitation">Sanitaion</option>
+                <option value="health">Health</option>
+                </select>
+              </div>
+
+               <div class="form-group" id="matrixGroup">
+              <label>Add More Option</label> : <input type="text" class="form-control addNewmatrixOption newMatrixBoxes" placeholder="value" required="required">
+              </div>
+              <button class="btn btn-sm btn-success" id="input_matrix_settings_btn">Add</button>
+              <button class="btn btn-sm btn-danger" id="remove_matrix_settings_btn">Remove</button>
+
+
+             <div class="text-center">
+               <button type="submit" class="btn btn-sm btn-primary" id="matrix_save_all">Save</button>
+               <button type="reset" class="btn btn-sm btn-danger" id="matrix_clear_all" onclick="reset()">Clear</button>
+               </div>
+              </form>
+              
+            </div>
+
+  <!-- Matrix End -->
+
+
+
+
+
+
+          </div>
+
+     </div>
+
+              
+             
+    
+
+
+
+       
+
+        <div class="main_page col-md-8">
+          
+          <div class="main_form_submit">
+            <button id="main_submit">Submit</button>
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+
+
+   <!--  <script src="cdn/jquery.min.js"></script>
+    <script src="cdn/jquery-ui.min.js"></script>
+    <script src="jquery.serialize-object.min.js"></script> -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- 
+   <script src="http://code.jquery.com/jquery-1.10.2.js"></script> -->
+  <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/serializejson.js"></script>
+   <script src="build/js/intlTelInput.js"></script>
+   <script src="js/dcalendar.picker.js"></script>
+   <script src="js/serializejson.js"></script>
+
+  <script src="js/jquery.serializeObject.min.js"></script>
+   
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+
+
+
+  <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
+
+
+  <!--    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+    <script src="js/main.js"></script>
+
+
+
+  <script>
+    var reset= function(){
+      $('form :input').val("");
+    }
+  </script>
+  <script>
+   $(function() {
+      $( "#sortable" ).sortable();
+      $( "#sortable" ).disableSelection();
+    } );
+  </script>
+  <script>
+    function showValue(newValue)
+  {
+    document.getElementById("print_range").innerHTML=newValue;
+  }
+  </script>
+
+
+  <script>
+  // just for the demos, avoids form submit
+  jQuery.validator.setDefaults({
+    debug: true,
+    success: "valid"
+  });
+  $( "input[type='email']" ).validate({
+    rules: {
+      field: {
+        required: true,
+        email: true
+      }
+    }
+  });
+  </script>
+
+  <script>
+
+  // $("#main_submit").click(function(e){
+  //   e.preventDefault();
+  //   // console.log($(this).parent());
+  //   var objectNew = $('#sortable').html();
+  //   // console.log(objectNew)
+  //   objectNew = objectNew.serializeJSON();
+  //   console.log(objectNew);
+  // })
+  $("#main_submit").click(function(e){
+  e.preventDefault();
+  objectNew = $('#sortable').html();
+  // console.log(objectNew)
+  var minutes = $('#sortable').serializeObject();
+  console.log(minutes);
+  });
+  </script>
+
+
+
+
+
+
+  </body>
+
+  </html>

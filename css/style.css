@@ -124,8 +124,17 @@ li.li {
     margin: 10px;
 }
 
-.radionDiv{
+.radionDivOne{
   width: 100%;
+    height: auto;
+    overflow: auto;
+        margin: 33px;
+        padding: 25px;
+}
+
+.radionDivTwo{
+        margin-top: 150px;
+         width: 100%;
     height: auto;
     overflow: auto;
         margin: 33px;

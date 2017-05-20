@@ -3,6 +3,7 @@
           $('.select_settings').hide();
 
           var mainObj = {};
+      
           mainObj["inputs"] = [];
 
           let formParent = document.getElementsByClassName('main_page');
@@ -1560,20 +1561,22 @@
                   }
               })
 
-              $('#main_submit').unbind().click(function(e) {
+              $('#main_submit').click(function(e) {
                   e.preventDefault();
                   var formName = prompt("Please Name The form");
                   if (formName == '') {
                       alert("You can't save form without naming it.")
                   } else {
+                    mainObj["name"] = formName;
+                    console.log(JSON.stringify(mainObj));
 
                   		$.ajax({
-						    url: 'api.letsendorse.com:81/form',
-						    type: "POST",
-						    data: JSON.stringify(mainObj),
-						    contentType: "application/json"
-						    
-						});
+          						    url: 'http://test.letsendorse.com/form',
+          						    type: "POST",
+          						    data: JSON.stringify(mainObj),
+          						    contentType: "application/json"
+          						    
+          						});
 
                       // localStorage.setItem(formName, JSON.stringify(mainObj));
                       // console.log(JSON.stringify(mainObj));
